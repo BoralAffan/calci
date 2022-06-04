@@ -40,7 +40,19 @@ class _calciState extends State<calci> {
               fontStyle: FontStyle.italic),
         ),
         backgroundColor: Color.fromARGB(255, 133, 175, 165),
-        centerTitle: true,
+        centerTitle: false,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.attach_money),
+            color: Colors.black,
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.menu),
+            color: Colors.black,
+          ),
+        ],
       ),
       body: Container(
         child: Column(
