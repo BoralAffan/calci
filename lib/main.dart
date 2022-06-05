@@ -1,3 +1,4 @@
+import 'package:calci/button.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -27,6 +28,10 @@ class calci extends StatefulWidget {
 }
 
 class _calciState extends State<calci> {
+  void btnOnClick(String btnValue) {
+    print(btnValue);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,95 +93,59 @@ class _calciState extends State<calci> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('AC'),
-                ),
-                Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(
-                    onPressed: () {}, child: Icon(Icons.backspace_outlined)),
-                Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(
-                    onPressed: () {}, child: Icon(Icons.percent_outlined)),
+                calci2btn(text: 'AC', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
                 OutlinedButton(
                   onPressed: () {},
-                  child: Text(
-                    '/',
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  child: Icon(Icons.backspace_outlined, color: Colors.white),
                   style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 227, 137, 73)),
-                )
+                      backgroundColor: Colors.orangeAccent),
+                ),
+                Padding(padding: EdgeInsets.only(right: 40)),
+                OutlinedButton(
+                  onPressed: () {},
+                  child: Icon(Icons.percent_outlined, color: Colors.white),
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.orangeAccent),
+                ),
+                Padding(padding: EdgeInsets.only(right: 40)),
+                calci2btn(text: '/', callback: btnOnClick),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('7'),
-                ),
+                calcibuttons(text: '7', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(onPressed: () {}, child: Text('8')),
+                calcibuttons(text: '8', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(onPressed: () {}, child: Text('9')),
+                calcibuttons(text: '9', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                OutlinedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'X',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 227, 137, 73)),
-                )
+                calci2btn(text: 'X', callback: btnOnClick),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('4'),
-                ),
+                calcibuttons(text: '4', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(onPressed: () {}, child: Text('5')),
+                calcibuttons(text: '5', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(onPressed: () {}, child: Text('6')),
+                calcibuttons(text: '6', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                OutlinedButton(
-                  onPressed: () {},
-                  child: Text(
-                    '-',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 227, 137, 73)),
-                )
+                calci2btn(text: '-', callback: btnOnClick)
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('1'),
-                ),
+                calcibuttons(text: '1', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(onPressed: () {}, child: Text('2')),
+                calcibuttons(text: '2', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(onPressed: () {}, child: Text('3')),
+                calcibuttons(text: '3', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                OutlinedButton(
-                  onPressed: () {},
-                  child: Text(
-                    '+',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 227, 137, 73)),
-                )
+                calci2btn(text: '+', callback: btnOnClick)
               ],
             ),
             Row(
@@ -184,19 +153,12 @@ class _calciState extends State<calci> {
               children: [
                 ElevatedButton(onPressed: () {}, child: Icon(Icons.swap_horiz)),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(onPressed: () {}, child: Text('0')),
+                calcibuttons(text: '0', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                ElevatedButton(onPressed: () {}, child: Text('.')),
+                calcibuttons(text: '.', callback: btnOnClick),
                 Padding(padding: EdgeInsets.only(right: 40)),
-                OutlinedButton(
-                  onPressed: () {},
-                  child: Text(
-                    '=',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 227, 137, 73)),
-                )
+                // calcibuttons(text: '=', callback: btnOnClick),
+                calci2btn(text: '=', callback: btnOnClick)
               ],
             ),
           ],
