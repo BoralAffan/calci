@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'alertdialog.dart';
 import 'animatedText.dart';
+import 'bottomNavigation.dart';
 
 void main(List<String> args) {
   runApp(MaterialApp(
@@ -10,6 +11,6 @@ void main(List<String> args) {
     theme: new ThemeData(
       primaryColor: Colors.green
     ),
-    home: AnimatedText(),
+    home: BottomNavigationWidget(),
   ));
 }

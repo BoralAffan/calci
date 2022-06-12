@@ -20,10 +20,10 @@ class AnimatedText extends StatelessWidget {
                 TypewriterAnimatedText('Affan Boral',
                     textStyle:
                       const  TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    speed: Duration(milliseconds: 300))
+                    speed: const Duration(milliseconds: 300))
               ],
               totalRepeatCount: 4,
-              pause: Duration(milliseconds: 200),
+              pause: const Duration(milliseconds: 200),
               displayFullTextOnTap: true,
               stopPauseOnTap: true,
             ),
